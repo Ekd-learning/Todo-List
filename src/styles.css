@@ -1,0 +1,59 @@
+body {
+  margin: 0px;
+  display: flex;
+}
+.projects_container {
+  margin: 8px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(49, 49, 199);
+  width: 30vw;
+  height: 100vh;
+}
+.header,
+form {
+  margin: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.projects_list {
+  margin: inherit;
+}
+.project {
+  background-color: white;
+  /* min-height: 1em; */
+  font-size: 24px;
+  font-weight: 500;
+  border-radius: 16px;
+  padding: 10px;
+  text-align: left;
+  margin: 1em;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.low {
+  color: green;
+}
+.medium {
+  color: darkblue;
+}
+.high {
+  color: red;
+}
+
+.todos_container {
+  margin: 8px;
+  display: flex;
+  flex-direction: column;
+  background-color: red;
+  width: 70vw;
+  height: 100wh;
+}
+.task {
+  background-color: white;
+  margin: 8px;
+  padding: 8px;
+}
