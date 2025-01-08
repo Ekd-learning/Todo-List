@@ -6,12 +6,16 @@ class Project {
   #dueDate;
   #priority;
   #todoList;
-  constructor(title = "the project", dueDate = "tomorrow", priority = "low") {
+  constructor(
+    title = "The Project",
+    dueDate = `${new Date().toJSON().slice(0, 10)}`,
+    priority = "low"
+  ) {
     this.#title = title;
     this.#dueDate = dueDate;
     this.#priority = priority;
     this.#todoList = [];
-    this.#todoList.push(new ToDo());
+    //this.#todoList.push(new ToDo());
     Project.counter++;
   }
   getTitle() {
@@ -21,7 +25,6 @@ class Project {
     return this.#dueDate;
   }
   getPriority() {
-    console.log("this priority: ", this.#priority);
     return this.#priority;
   }
   setTitle(newTitle) {
@@ -42,6 +45,12 @@ class Project {
       "\npriority:",
       this.#priority
     );
+  }
+  addTask(task) {
+    this.#todoList.push(task);
+  }
+  getTasks() {
+    return this.#todoList;
   }
 }
 export { Project };

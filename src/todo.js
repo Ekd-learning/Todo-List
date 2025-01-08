@@ -6,17 +6,15 @@ class ToDo {
   #notes;
   #checklist;
   constructor(
-    title = "to do",
-    description = "things to do today",
-    dueDate = "today",
-    priority = "low",
+    title = "The Task",
+    description = "No description",
+    dueDate = `${new Date().toJSON().slice(0, 10)}`,
     notes = "no notes",
     checklist = false
   ) {
     this.#title = title;
     this.#description = description;
     this.#dueDate = dueDate;
-    this.#priority = priority;
     this.#notes = notes;
     this.#checklist = checklist;
   }
@@ -28,9 +26,6 @@ class ToDo {
   }
   getDueDate() {
     return this.#dueDate;
-  }
-  getPriority() {
-    return this.#priority;
   }
   getNotes() {
     return this.#notes;
@@ -46,9 +41,6 @@ class ToDo {
   }
   setDueDate(newDueDate) {
     this.#dueDate = newDueDate;
-  }
-  setPriority(newPriority) {
-    this.#priority = newPriority;
   }
   setNotes(newNotes) {
     this.#notes = newNotes;

@@ -2,6 +2,24 @@ body {
   margin: 0px;
   display: flex;
 }
+
+.modal-content {
+  display: block;
+  background-color: grey;
+  padding: 8px;
+  border-radius: 8px;
+  width: 40vw;
+  height: 19.5vh;
+}
+form {
+  gap: 5px;
+}
+
+.hidden {
+  /* for modal windows */
+  display: none;
+}
+
 .projects_container {
   margin: 8px;
   display: flex;
@@ -50,10 +68,29 @@ form {
   flex-direction: column;
   background-color: red;
   width: 70vw;
-  height: 100wh;
+  height: 100vh;
+  align-items: center;
 }
 .task {
   background-color: white;
   margin: 8px;
   padding: 8px;
+  width: 65vw;
+  border-radius: 8px;
+}
+
+.newTaskBtn_container {
+  width: 100vw;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.newTaskBtn {
+  width: 30vw;
+  height: 80px;
+  margin: 10px;
+  border-radius: 16px;
+  border-style: none;
 }
